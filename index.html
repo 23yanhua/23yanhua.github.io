@@ -77,18 +77,33 @@
         <hr>
 <p>title: my ftp<br>date: 2018-05-21   </p>
 <h1 id="ftp服务器搭建（Linux）"><a href="#ftp服务器搭建（Linux）" class="headerlink" title="ftp服务器搭建（Linux）"></a>ftp服务器搭建（Linux）</h1><h2 id="相关软件-vsftpd"><a href="#相关软件-vsftpd" class="headerlink" title="相关软件 vsftpd"></a>相关软件 vsftpd</h2><p>如果是第一次使用，在命令行输入   <strong>yum install vsftpd</strong>   </p>
+<h2 id="服务器设置"><a href="#服务器设置" class="headerlink" title="服务器设置"></a>服务器设置</h2><blockquote>
+<p>1.服务器环境设置  </p>
+</blockquote>
 <p>服务器启动模式:listen=YES(默认为stand daemon，如果改用super daemon应启动xined，listen=NO）<br>欢迎信息<br>配置banner_file=/etc/vsftpd/welcome.txt<br>建立欢迎界面<br>vim /etc/vsftpd/welcome.txt  </p>
-<p>匿名用户只能在<strong>/var/ftp</strong>浏览（可在此目录放置文件）<br>==防火墙加入所需要的FTP模块==<br>vim /etc/sysconfig/iptables-config<br>IPTABLES_MODULES=”ip_nat_ftp ip_conntrack_ftp”<br>开启iptables  /etc/init.d/iptables restart     </p>
+<blockquote>
+<p>2.与实体用户较相关设置</p>
+</blockquote>
+<blockquote>
+<p>3.匿名用户登录设置  </p>
+</blockquote>
+<p>匿名用户只能在<strong>/var/ftp</strong>浏览（可在此目录放置文件）   </p>
+<blockquote>
+<p>4.关于系统安全方面设置   </p>
+</blockquote>
+<p>==防火墙加入所需要的FTP模块==<br>vim /etc/sysconfig/iptables-config<br>IPTABLES_MODULES=”ip_nat_ftp ip_conntrack_ftp”<br>开启iptables  /etc/init.d/iptables restart     </p>
 <p>==兼顾主动式与被动式连接==<br>iptables -A INPUT -p TCP -i eth0 –dport 21  –sport 1024:65534 -j ACCEPT<br>iptables -A INPUT -p TCP -i eth0 –dport 65400:65410  –sport 1024:65534 -j ACCEPT  </p>
-<p>附：<br>ftp账号添加命令：useradd passwd<br>    知道自己ftp服务器的ip地址： ifconfig  </p>
-<p>ftp –&gt;  open [服务器ip地址]  </p>
+<p>附：<br>ftp账号添加命令：useradd passwd<br>知道自己ftp服务器的ip地址： ifconfig  </p>
+<p><strong>登录ftp</strong><br>ftp –&gt;  open [服务器ip地址]  </p>
+<p><strong>存在问题</strong></p>
 <p>默认一般用户登录无法取得用户主目录，是SElinux问题，可通过修改规则：<br>setsebool -P ftp_home_dir=1  </p>
+<hr>
 <p>有错误的地方请指导，邮箱<a href="mailto:985207502@qq.com" target="_blank" rel="noopener">985207502@qq.com</a>  </p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/21/my-ftp/" data-id="cjhfz4zgi0000dsi21co9xn2a" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/21/my-ftp/" data-id="cjhfz9z5w0001h4i2bw9i3fjq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -125,7 +140,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/21/my-frist/" data-id="cjhfz1qfs0000pgi2wg08jxfp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/21/my-frist/" data-id="cjhfz9z5g0000h4i21yi0bsux" class="article-share-link">Share</a>
       
       
     </footer>
