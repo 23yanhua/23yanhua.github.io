@@ -62,21 +62,29 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-my-ftp" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-ftp" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/05/21/my-ftp/" class="article-date">
-  <time datetime="2018-05-21T07:49:06.966Z" itemprop="datePublished">2018-05-21</time>
+    <a href="/2018/05/21/ftp/" class="article-date">
+  <time datetime="2018-05-20T16:00:00.000Z" itemprop="datePublished">2018-05-21</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/21/ftp/">ftp</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>title: my ftp<br>date: 2018-05-21   </p>
-<h1 id="ftp服务器搭建（Linux）"><a href="#ftp服务器搭建（Linux）" class="headerlink" title="ftp服务器搭建（Linux）"></a>ftp服务器搭建（Linux）</h1><h2 id="相关软件-vsftpd"><a href="#相关软件-vsftpd" class="headerlink" title="相关软件 vsftpd"></a>相关软件 vsftpd</h2><p>如果是第一次使用，在命令行输入   <strong>yum install vsftpd</strong>   </p>
+        <h1 id="ftp服务器搭建（Linux）"><a href="#ftp服务器搭建（Linux）" class="headerlink" title="ftp服务器搭建（Linux）"></a>ftp服务器搭建（Linux）</h1><h2 id="相关软件-vsftpd"><a href="#相关软件-vsftpd" class="headerlink" title="相关软件 vsftpd"></a>相关软件 vsftpd</h2><p>如果是第一次使用，在命令行输入   <strong>yum install vsftpd</strong>   </p>
 <h2 id="服务器设置"><a href="#服务器设置" class="headerlink" title="服务器设置"></a>服务器设置</h2><h3 id="1-服务器环境设置"><a href="#1-服务器环境设置" class="headerlink" title="1.服务器环境设置"></a>1.服务器环境设置</h3><p>服务器启动模式:listen=YES(默认为stand daemon，如果改用super daemon应启动xined，listen=NO）<br>欢迎信息<br>配置banner_file=/etc/vsftpd/welcome.txt<br>建立欢迎界面<br>vim /etc/vsftpd/welcome.txt  </p>
 <h3 id="2-与实体用户较相关设置"><a href="#2-与实体用户较相关设置" class="headerlink" title="2.与实体用户较相关设置"></a>2.与实体用户较相关设置</h3><h3 id="3-匿名用户登录设置"><a href="#3-匿名用户登录设置" class="headerlink" title="3.匿名用户登录设置"></a>3.匿名用户登录设置</h3><p>匿名用户只能在<strong>/var/ftp</strong>浏览（可在此目录放置文件）   </p>
 <h3 id="4-关于系统安全方面设置"><a href="#4-关于系统安全方面设置" class="headerlink" title="4.关于系统安全方面设置"></a>4.关于系统安全方面设置</h3><p>==防火墙加入所需要的FTP模块==<br>vim /etc/sysconfig/iptables-config<br>IPTABLES_MODULES=”ip_nat_ftp ip_conntrack_ftp”<br>开启iptables  /etc/init.d/iptables restart     </p>
@@ -91,44 +99,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/21/my-ftp/" data-id="cjhfzxrpf0001p4i2hxdfuidz" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-my-first" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/05/21/my-first/" class="article-date">
-  <time datetime="2018-05-20T16:00:00.000Z" itemprop="datePublished">2018-05-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/21/my-first/">my first</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>nice to meet you！</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/21/my-first/" data-id="cjhfzxrpa0000p4i2sutfcmn0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/21/ftp/" data-id="cjhg04sul0000jsi2q70oe62q" class="article-share-link">Share</a>
       
       
     </footer>
@@ -169,11 +140,7 @@
       <ul>
         
           <li>
-            <a href="/2018/05/21/my-ftp/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2018/05/21/my-first/">my first</a>
+            <a href="/2018/05/21/ftp/">ftp</a>
           </li>
         
       </ul>
